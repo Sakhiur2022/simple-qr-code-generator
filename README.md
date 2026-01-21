@@ -15,3 +15,8 @@ A minimal Node.js utility for generating QR codes interactively using terminal p
 ## Usage
 ```bash
 node index.js
+```
+
+## Demo
+![Terminal Prompt](screenshots/terminal_prompt.png)
+<img src="screenshots/qr_image.svg" alt="Generated QR Code" width="200" />
