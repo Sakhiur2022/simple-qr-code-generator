@@ -14,7 +14,7 @@ inquirer
   .then((answers) => {
 
 let qr_svg = qr.image(answers.url, { type: 'svg' });
-qr_svg.pipe(fs.createWriteStream(`${answers.url}.svg`));
+qr_svg.pipe(fs.createWriteStream(`qr_image.svg`));
 fs.writeFile('url.txt',answers.url,(error)=>{
     if(error) console.log(error)
 })
