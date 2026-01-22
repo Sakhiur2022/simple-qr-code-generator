@@ -1,19 +1,26 @@
 {
-  "name": "vlad",
-  "version": "1.0.0",
-  "description": "this is just a test project to learn npm",
-  "main": "index.js",
   "type": "module",
+  "dependencies": {
+    "inquirer": "^13.2.1",
+    "qr-image": "^3.2.0"
+  },
+  "name": "js",
+  "version": "1.0.0",
+  "description": "A minimal Node.js utility for generating QR codes interactively using terminal prompts.",
+  "main": "index.js",
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sakhiur2022/simple-qr-code-generator.git"
+  },
+  "keywords": [],
+  "author": "Sakhiur",
   "license": "ISC",
-  "dependencies": {
-    "inquirer": "^13.2.1",
-    "pokemon": "^3.3.0",
-    "qr-image": "^3.2.0",
-    "sillyname": "^0.1.0",
-    "superheroes": "^4.0.0"
-  }
+  "bugs": {
+    "url": "https://github.com/Sakhiur2022/simple-qr-code-generator/issues"
+  },
+  "homepage": "https://github.com/Sakhiur2022/simple-qr-code-generator#readme"
 }
