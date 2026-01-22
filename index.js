@@ -1,29 +1,28 @@
-import fs from 'fs';
 import inquirer from 'inquirer';
-import qr from 'qr-image';
+import qr from "qr-image";
+import { writeFile,createWriteStream } from "node:fs";
+
 inquirer
   .prompt([
-    /* Pass your questions in here */
     {
-        type:"input",
-        name:"url",
-        message:""
+      "message":"Enter url: ",
+      "name": "url"
     }
-
   ])
-  .then((answers) => {
+  .then((answer) => {
+    var qr_svg = qr.image(answer.url);
+    qr_svg.pipe(createWriteStream("qr_code.png"));
+    writeFile("url.txt", answer.url, (err) => {
+      if (err) throw err;
+      console.log("The file has been saved!");
+    });
 
-let qr_svg = qr.image(answers.url, { type: 'svg' });
-qr_svg.pipe(fs.createWriteStream(`qr_image.svg`));
-fs.writeFile('url.txt',answers.url,(error)=>{
-    if(error) console.log(error)
-})
   })
   .catch((error) => {
     if (error.isTtyError) {
-        console.log("Prompt couldn't be rendered in the current environment");
-    
+      console.error("Prompt couldn't be rendered in the current environment")
     } else {
       console.error(error.message)
+      // Something else went wrong
     }
   });
