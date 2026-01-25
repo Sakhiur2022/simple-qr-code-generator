@@ -22,4 +22,4 @@ node index.js
 
 ## Demo
 ![Terminal Prompt](screenshots/terminal_prompt.png)
-<img src="screenshots/qr_image.png" alt="Generated QR Code" width="200" />
+<img src="screenshots/qr_image.png" alt="Generated QR Code" width="150" />
