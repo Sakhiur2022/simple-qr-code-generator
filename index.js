@@ -23,6 +23,6 @@ inquirer
       console.error("Prompt couldn't be rendered in the current environment")
     } else {
       console.error(error.message)
-      // Something else went wrong
+       console.error("Something else went wrong")
     }
   });
