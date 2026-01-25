@@ -14,6 +14,9 @@ A minimal Node.js utility for generating QR codes interactively using terminal p
 
 ## Usage
 ```bash
+npm install
+```
+```bash
 node index.js
 ```
 
