@@ -2,6 +2,7 @@ import inquirer from 'inquirer';
 import qr from "qr-image";
 import { writeFile,createWriteStream } from "node:fs";
 
+//main code
 inquirer
   .prompt([
     {
