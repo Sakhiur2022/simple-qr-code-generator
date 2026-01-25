@@ -20,7 +20,7 @@ inquirer
   })
   .catch((error) => {
     if (error.isTtyError) {
-      console.error("Prompt couldn't be rendered in the current environment")
+      console.error("Sorry,the prompt couldn't be rendered in the current environment")
     } else {
       console.error(error.message)
        console.error("Something else went wrong")
